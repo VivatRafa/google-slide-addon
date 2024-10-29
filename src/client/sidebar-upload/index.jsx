@@ -1,8 +1,8 @@
 import { createRoot } from 'react-dom/client';
-import SheetEditor from './components/SheetEditor';
+import UploadSidebar from './components/UploadSidebar';
 
 import './styles.css';
 
 const container = document.getElementById('index');
 const root = createRoot(container);
-root.render(<SheetEditor />);
+root.render(<UploadSidebar />);

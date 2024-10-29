@@ -4,7 +4,27 @@
   "exceptionLogging": "STACKDRIVER",
   "oauthScopes": [
     "https://www.googleapis.com/auth/script.container.ui",
-    "https://www.googleapis.com/auth/spreadsheets"
+    "https://www.googleapis.com/auth/presentations",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/documents.readonly"
   ],
-  "runtimeVersion": "V8"
+  "runtimeVersion": "V8",
+  "addOns": {
+    "common": {
+      "name": "My Google Slides Add-on",
+      "logoUrl": "https://cdn-icons-png.flaticon.com/512/3032/3032276.png",
+      "useLocaleFromApp": true,
+      "openLinkUrlPrefixes": ["https://"],
+      "homepageTrigger": {
+        "runFunction": "onOpen",
+        "enabled": true
+      }
+    },
+    "slides": {
+      "homepageTrigger": {
+        "runFunction": "onOpen",
+        "enabled": true
+      }
+    }
+  }
 }
